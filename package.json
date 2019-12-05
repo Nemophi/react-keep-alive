@@ -1,0 +1,125 @@
+{
+  "_from": "react-keep-alive",
+  "_id": "react-keep-alive@2.5.2",
+  "_inBundle": false,
+  "_integrity": "sha1-wLgRjz3WdDMj0WYrg2jm69ZJ6Bo=",
+  "_location": "/react-keep-alive",
+  "_phantomChildren": {
+    "react-is": "16.10.2"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-keep-alive",
+    "name": "react-keep-alive",
+    "escapedName": "react-keep-alive",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/react-keep-alive/download/react-keep-alive-2.5.2.tgz",
+  "_shasum": "c0b8118f3dd6743323d1662b8368e6ebd649e81a",
+  "_spec": "react-keep-alive",
+  "_where": "/Users/huangjie/Desktop/iceworks-workspace/swc",
+  "author": {
+    "name": "Shen Chang"
+  },
+  "bugs": {
+    "url": "https://github.com/StructureBuilder/react-keep-alive/issues"
+  },
+  "bundleDependencies": false,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@types/js-md5": "^0.4.2",
+    "hoist-non-react-statics": "^3.3.0",
+    "js-md5": "^0.7.3"
+  },
+  "deprecated": false,
+  "description": "Package will allow components to maintain their status, to avoid repeated re-rendering.",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@types/hoist-non-react-statics": "^3.0.1",
+    "@types/node": "^10.12.21",
+    "@types/react": "^16.8.1",
+    "@types/react-dom": "^16.8.2",
+    "animate.css": "^3.7.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.5",
+    "codecov": "^3.2.0",
+    "css-loader": "^2.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-transition-group": "^4.0.1",
+    "redux": "^4.0.1",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.1",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "homepage": "https://github.com/StructureBuilder/react-keep-alive",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "keep-alive",
+    "cache"
+  ],
+  "license": "MIT",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "name": "react-keep-alive",
+  "peerDependencies": {
+    "react": ">=16.3.0",
+    "react-dom": ">=16.3.0",
+    "react-router-dom": ">=5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StructureBuilder/react-keep-alive.git"
+  },
+  "scripts": {
+    "build:cjs": "npm run clean:cjs && tsc --outDir cjs --module commonjs",
+    "build:demo": "webpack",
+    "build:dist": "npm run build:es && npm run build:cjs",
+    "build:es": "npm run clean:es && tsc",
+    "clean:cjs": "rimraf cjs",
+    "clean:es": "rimraf es",
+    "codecov": "codecov",
+    "publish:major": "npm version major && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:patch": "npm version patch && npm publish",
+    "start:demo": "webpack-dev-server --hot --historyApiFallback",
+    "start:es": "npm run clean:es && tsc -w -sourcemap --outDir es",
+    "test": "jest"
+  },
+  "sideEffects": false,
+  "version": "2.5.2"
+}
