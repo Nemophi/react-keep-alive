@@ -307,6 +307,30 @@ function Test() {
 ```
 
 
+### `unCache & unCacheAll`
+`unCache` will uninstall the keepAliveComponent by the name of keepAliveComponent,or you can use unCacheAll,it will uninstall all the keepAliveComponent.
+
+#### Example
+```JavaScript
+import React from 'react';
+import { Provider } from 'react-keep-alive';
+
+ReactDOM.render(
+  <Router>
+    <Provider ref={(ref) => window.keepAliveProvider = ref}>
+      <App />
+    </Provider>
+  </Router>,
+  document.getElementById('root'),
+);
+// uninstall the specified component
+window.keepAliveProvider.unCache("your KeepAlive Component Name");
+// uninstall all components
+window.keepAliveProvider.unCacheAll();
+```
+
+
+
 ## 🐛 Issues
 If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/Sam618/react-keep-alive/issues).
 
