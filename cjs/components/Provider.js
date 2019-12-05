@@ -91,6 +91,34 @@ var KeepAliveProvider = /** @class */ (function (_super) {
                 });
             });
         };
+        _this.unCache = function (name) {
+            var _a = _this, keys = _a.keys, cache = _a.cache;
+            var identification;
+            for (var key in cache) {
+                if (cache[key].children._owner.key === name) {
+                    identification = key;
+                    break;
+                }
+            }
+            if (!identification) return;
+            _this.keys = keys.filter(function (item) {
+                return item != identification;
+            });
+            setTimeout(() => {
+                _this.forceUpdate(() => {
+                    delete _this.cache[identification];
+                });
+            }, 0);
+        };
+        _this.unCacheAll = function () {
+            var _a = _this, cache = _a.cache, keys = _a.keys;
+            var spliceKeys = keys.splice(0, keys.length);
+            _this.forceUpdate(function () {
+                spliceKeys.forEach(function (key) {
+                    delete cache[key];
+                });
+            });
+        };
         _this.unactivate = function (identification) {
             var cache = _this.cache;
             _this.cache[identification] = __assign({}, cache[identification], { activated: false, lifecycle: LIFECYCLE.UNMOUNTED });

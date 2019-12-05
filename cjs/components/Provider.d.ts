@@ -61,4 +61,6 @@ export default class KeepAliveProvider extends React.PureComponent<IKeepAlivePro
     unactivate: (identification: string) => void;
     private startMountingDOM;
     render(): JSX.Element | null;
+    unCache: (name: string) => void;
+    unCacheAll: () => void;
 }
