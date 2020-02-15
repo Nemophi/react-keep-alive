@@ -308,7 +308,7 @@ function Test() {
 
 
 ### `unCache & unCacheAll`
-`unCache` will uninstall the keepAliveComponent by the name of keepAliveComponent,or you can use unCacheAll,it will uninstall all the keepAliveComponent.
+`unCache` will uninstall the keepAliveComponent by the name of keepAliveComponent,or you can use `unCacheAll`,it will uninstall all the keepAliveComponent.
 
 #### Example
 ```JavaScript
